@@ -19,7 +19,6 @@ app.use('/user', userRouter);
 const urlRouter = require('./routes/URLRoutes')
 app.use('/url', urlRouter)
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server Running on port ${PORT}`);
-});
+    console.log('Server running on PORT 3000')
+})
