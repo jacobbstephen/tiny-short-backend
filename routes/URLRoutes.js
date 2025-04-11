@@ -50,7 +50,7 @@ router.post("/shorten", authMiddleware, async (req, res) => {
     });
     if (existingURL) {
       return res.status(200).json({
-        shortUrl: `http://localhost:3000/url/${existingURL.shortId}`,
+        shortUrl: `https://tiny-short-backend-production.up.railway.app/url/${existingURL.shortId}`,
       });
     }
 
@@ -69,7 +69,7 @@ router.post("/shorten", authMiddleware, async (req, res) => {
     const qrCodeBase64 = qrBuffer.toString("base64");
 
     return res.status(200).json({
-      shortUrl: `http://localhost:3000/url/${shortCode}`,
+      shortUrl: `https://tiny-short-backend-production.up.railway.app/url/${shortCode}`,
       qrCode: `data:image/png;base64,${qrCodeBase64}`,
     });
   } catch (err) {
